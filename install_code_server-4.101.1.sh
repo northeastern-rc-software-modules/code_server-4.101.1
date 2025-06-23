@@ -1,21 +1,21 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -n 4
-#SBATCH -p rc
+#SBATCH -p short
 
 # Setting up the environment
-source env_code_server-4_91_1.sh
+source env_code_server-4.101.1.sh
 
 # Creating the src directory for the installed application
 mkdir -p $SOFTWARE_DIRECTORY/src
 
 # Installing $SOFTWARE_NAME/$SOFTWARE_VERSION
 cd $SOFTWARE_DIRECTORY/src
-wget https://github.com/coder/code-server/releases/download/v4.91.1/code-server-4.91.1-linux-amd64.tar.gz
-tar -xvf code-server-4.91.1-linux-amd64.tar.gz
-mv code-server-4.91.1-linux-amd64/ ../
+wget https://github.com/coder/code-server/releases/download/v4.101.1/code-server-4.101.1-linux-amd64.tar.gz
+tar -xvf code-server-4.101.1-linux-amd64.tar.gz
+mv code-server-4.101.1-linux-amd64/ ../
 
-export SOFTWARE_DIRECTORY=$SOFTWARE_DIRECTORY/code-server-4.91.1-linux-amd64
+export SOFTWARE_DIRECTORY=$SOFTWARE_DIRECTORY/code-server-4.101.1-linux-amd64
 
 # Creating modulefile
 touch $SOFTWARE_VERSION

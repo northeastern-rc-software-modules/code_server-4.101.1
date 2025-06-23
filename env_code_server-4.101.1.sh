@@ -6,7 +6,8 @@
 # CLUSTER_DIRECTORY needs to be modified
 export CLUSTER_DIRECTORY=/shared/EL9/explorer
 export SOFTWARE_NAME=code-server
-export SOFTWARE_VERSION=4.91.1
+export SOFTWARE_VERSION=4.101.1
+export GITHUB_URL=https://github.com/northeastern-rc-software-modules/code_server-4.101.1
 
 export SOFTWARE_DIRECTORY=$CLUSTER_DIRECTORY/$SOFTWARE_NAME/$SOFTWARE_VERSION
 export PATH=$SOFTWARE_DIRECTORY/bin:$PATH
